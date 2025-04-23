@@ -3,7 +3,7 @@ package String;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class stringCount {
+public class stringFrequency {
 
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
