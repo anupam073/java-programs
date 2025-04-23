@@ -8,7 +8,7 @@ public class primeNumber {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter number to Check: ");
 		int num = sc.nextInt();
-		boolean isprime = false;
+		boolean isprime = true;
 		
 		if (num<=1) {
 			isprime=false;
@@ -17,6 +17,7 @@ public class primeNumber {
 		for(int i =2; i<=Math.sqrt(num); i++) {
 			if(num%i ==0) {
 				isprime= false;
+				break;
 				
 			}
 		}
