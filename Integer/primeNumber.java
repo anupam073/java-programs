@@ -3,32 +3,25 @@ package Integer;
 import java.util.Scanner;
 
 public class primeNumber {
-	
-	public static void main (String args[]) {
+
+	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter number to Check: ");
+		System.out.println("Enter a number: ");
 		int num = sc.nextInt();
-		boolean isprime = true;
-		
-		if (num<=1) {
-			isprime=false;
-		}
-		isprime=true;
-		for(int i =2; i<=Math.sqrt(num); i++) {
-			if(num%i ==0) {
-				isprime= false;
+		boolean isprime = false;
+
+		for (int i = 2; i < num / 2; i++) {
+			if (num % i == 0) {
+				isprime = true;
 				break;
-				
 			}
+
 		}
-		
-		if(isprime) {
+		if (!isprime && num > 1) {
 			System.out.println("prime");
-		}
-		else {
+		} else {
 			System.out.println("not prime");
 		}
-		
-	}
 
+	}
 }
